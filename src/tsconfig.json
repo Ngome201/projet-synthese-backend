@@ -1,0 +1,14 @@
+{
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+      },
+    "compilerOptions": {
+        "target": "es6",
+        "module": "CommonJS",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,// enables derivated annotation classes
+        "esModuleInterop": true
+    },
+    "include": ["/**/*.ts"]
+}
