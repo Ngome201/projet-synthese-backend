@@ -1,6 +1,0 @@
-service postgres status //check if postgres is active
-sudo -i -u postgres // login  postgres as root
-psql //to access pg cli
-\l // list all the databases
-CREATE USER "username" WITH PASSWORD "pass";
-GRANT ALL PRIVILEGES ON DATABASE "database_name" TO "username";
