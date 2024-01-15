@@ -39,6 +39,7 @@ export const saveState9 = async (req:Request,res:Response)=>{
         
     }
 }
+
 export const state9 = async (req:Request,res:Response)=>{
     try {
         list  = await state9Service.findAll()
