@@ -1,4 +1,4 @@
-import { AppDataSource } from "../../app";
+import { AppDataSource } from "../app";
 import { GenericService } from "./GenericService";
 import { MyZone } from "../types";
 import { Zone } from "../entities/Zone";

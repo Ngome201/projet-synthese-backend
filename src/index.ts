@@ -23,6 +23,7 @@ import state14Router from "./routes/state14.routes"
 import state13Router from "./routes/state13.routes"
 import state16Router from "./routes/state16.routes"
 import state17Router from "./routes/state17.routes"
+import HistRouter from "./routes.entities/historique.routes"
 
 const express = require("express")
 const app = express()
@@ -65,6 +66,8 @@ app.use('/entity/ressourceNaturelle',ressourceNatRouter)
 app.use('/entity/ressourceFaunique',ressourceFaunRouter)
 app.use('/entity/councilPresentation',councilPresent)
 app.use('/entity/councilSignage',councilSignage)
+
+app.use('/entity/historique', HistRouter)
 
 app.use('/edition/state1',state1Router)
 app.use('/edition/state2',state2Router)

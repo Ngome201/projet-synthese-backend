@@ -1,4 +1,4 @@
-import { deleteProbleme, getProbleme, insertProbleme } from "../controllers.entities/problemeRessourceNaturelle.controller"
+import { deleteProbleme, getProbleme, insertProbleme } from "../controllers.entities/ProblemeRessourceNaturelle.controller"
 import express from "express"
 
 const router = express.Router()

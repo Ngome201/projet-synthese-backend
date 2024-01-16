@@ -1,6 +1,6 @@
+import { AppDataSource } from "../app";
 import { GenericService } from "./GenericService";
 import { TypeEtat } from "../entities/TypeEtat";
-import { AppDataSource } from "../app";
 
 const typeEtatRepo = AppDataSource.getRepository(TypeEtat)
 

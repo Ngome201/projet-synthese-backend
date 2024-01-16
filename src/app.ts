@@ -11,6 +11,8 @@ import { Localite } from "./entities/Localite";
 import { Zone } from "./entities/Zone";
 import { RessourceFaunique } from "./entities/RessourceFaunique";
 import { TypeEtat } from "./entities/TypeEtat";
+import { Historique } from "./entities/Historique";
+
 
 export const AppDataSource = new DataSource({
     type:"postgres",
@@ -24,6 +26,7 @@ export const AppDataSource = new DataSource({
          CouncilPresentation, CouncilSignage,
          RessourceNaturelle, RessourceFaunique,
          State3,State4,State7,State9,State10, State8, State11,State13,State14,State15,State16,State17,
+         Historique,
          Pays, Region, Departement, Commune, Localite, Zone],
     synchronize :true
 })
@@ -38,7 +41,8 @@ export const AppDataSource = new DataSource({
 //     entities: [TypeEtat,
 //         CouncilPresentation, CouncilSignage,
 //         RessourceNaturelle, RessourceFaunique,
-//         State3,State4,State7,State9,State10, State8, State11,
+//         State3,State4,State7,State9,State10, State8, State11,State13,State14,State15,State16,State17,
+        //  Historique,
 //         Pays, Region, Departement, Commune, Localite, Zone],
 //     synchronize :true
 // })
