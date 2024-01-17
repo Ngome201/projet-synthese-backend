@@ -23,6 +23,17 @@ import state14Router from "./routes/state14.routes"
 import state13Router from "./routes/state13.routes"
 import state16Router from "./routes/state16.routes"
 import state17Router from "./routes/state17.routes"
+import state18Router from "./routes/state18.routes"
+import state19Router from "./routes/state19.routes"
+import state20Router from "./routes/state20.routes"
+import state21Router from "./routes/state21.routes"
+import state22Router from "./routes/state22.routes"
+import state23Router from "./routes/state23.routes"
+import state24Router from "./routes/state24.routes"
+import state25Router from "./routes/state25.routes"
+import state26Router from "./routes/state26.routes"
+
+
 
 const express = require("express")
 const app = express()
@@ -85,6 +96,17 @@ app.use('/edition/state14',state14Router)
 app.use('/edition/state15',state15Router)
 app.use('/edition/state16',state16Router)
 app.use('/edition/state17',state17Router)
+
+app.use('/edition/state18',state18Router)
+app.use('/edition/state19',state19Router)
+app.use('/edition/state20',state20Router)
+app.use('/edition/state21',state21Router)
+app.use('/edition/state22',state22Router)
+
+app.use('/edition/state23',state23Router)
+app.use('/edition/state24',state24Router)
+app.use('/edition/state25',state25Router)
+app.use('/edition/state26',state26Router)
 
 
 app.listen(9000,()=> console.log("app running on port 9000"))

@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 import { Sharedprops } from "./SharedProps";
 
 @Entity()
-export class State24 extends Sharedprops{
+export class State26 extends Sharedprops{
     constructor(
         coucheVulnerable : string,
         effConcerne : string[],
