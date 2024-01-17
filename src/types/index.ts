@@ -87,6 +87,10 @@ export type StateDTO11 = ZoneDescription & {
     list: state.State11[],
 }
 
+export type StateDTO12 = ZoneDescription & { // A modifier plus tard (quand l'état sera effectivement implémenté)
+    list: any[],
+}
+
 export type StateDTO13 = ZoneDescription & {
     list: state.State13[],
 }

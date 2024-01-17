@@ -18,6 +18,7 @@ import state5Router from "./routes/state5.routes"
 import state6Router from "./routes/state6.routes"
 import state8Router from "./routes/state8.routes"
 import state11Router from "./routes/state11.routes"
+import state12Router from "./routes/state12.routes"
 import state15Router from "./routes/state15.routes"
 import state14Router from "./routes/state14.routes"
 import state13Router from "./routes/state13.routes"
@@ -82,6 +83,7 @@ app.use('/edition/state8',state8Router)
 app.use('/edition/state9',state9Route)
 app.use('/edition/state10',state10Route)
 app.use('/edition/state11',state11Router)
+app.use('/edition/state12',state12Router)
 
 app.use('/edition/state13',state13Router)
 app.use('/edition/state14',state14Router)
