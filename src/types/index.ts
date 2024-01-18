@@ -106,3 +106,39 @@ export type StateDTO16 = ZoneDescription & {
 export type StateDTO17 = ZoneDescription & {
     list: state.State17[],
 }
+
+export type StateDTO18 = ZoneDescription & {
+    list: state.State18[],
+}
+
+export type StateDTO19 = ZoneDescription & {
+    list: state.State19[],
+}
+
+export type StateDTO20 = ZoneDescription & {
+    list: state.State20[],
+}
+
+export type StateDTO21 = ZoneDescription & {
+    list: state.State21[],
+}
+
+export type StateDTO22 = ZoneDescription & {
+    list: state.State22[],
+}
+
+export type StateDTO23 = ZoneDescription & {
+    list: state.State23[],
+}
+
+export type StateDTO24 = ZoneDescription & {
+    list: state.State24[],
+}
+
+export type StateDTO25 = ZoneDescription & {
+    list: state.State25[],
+}
+
+export type StateDTO26 = ZoneDescription & {
+    list: state.State26[],
+}
