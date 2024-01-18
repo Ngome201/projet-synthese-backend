@@ -1,11 +1,12 @@
 import { Request,Response } from "express"
-import { State9Service } from "../services"
-import { State9 } from "../entities"
-import { MyZone, StateDTO9 } from "../types"
-const state9Service = new State9Service()
-let list 
+import { State19Service } from "../services"
+import { State19 } from "../entities"
+import { MyZone, StateDTO19 } from "../types"
 
-export const getState9 = async (req:Request,res:Response)=>{
+const state19Service = new State19Service()
+let list
+
+export const getState19 = async (req:Request,res:Response)=>{
     let code: number = -1, critere: MyZone = undefined
 
     if(req.query.code_commune) {code = parseInt(req.query.code_commune.toString()); critere = MyZone.Commune}
@@ -14,8 +15,8 @@ export const getState9 = async (req:Request,res:Response)=>{
     else if(req.query.code_pays) {code = parseInt(req.query.code_pays.toString()); critere = MyZone.Pays}
 
     try {
-        list = await state9Service.findByZone(critere,code)
-        let state :StateDTO9 = {
+        list = await state19Service.findByZone(critere,code)
+        let state :StateDTO19 = {
             type_zone: MyZone[critere],
             code_zone: code,
             list: list
@@ -27,11 +28,19 @@ export const getState9 = async (req:Request,res:Response)=>{
         
     }
 }
-export const saveState9 = async (req:Request,res:Response)=>{
-    const {libelle, functionExpense, personExpense, investmentExpense,code_commune} = req.body
+export const saveState19 = async (req:Request,res:Response)=>{
+    const {
+        typeEspece,
+        effectif,
+        code_commune } = req.body
     try {
-        let state9 = new State9(libelle, functionExpense, personExpense, investmentExpense,code_commune)
-        let saved = await state9Service.save(state9)
+        let state19 = new State19(
+           
+        typeEspece,
+        effectif,
+        code_commune 
+            )
+        let saved = await state19Service.save(state19)
         res.status(201).json(saved)
         return
     } catch (error) {
@@ -39,10 +48,9 @@ export const saveState9 = async (req:Request,res:Response)=>{
         
     }
 }
-
-export const state9 = async (req:Request,res:Response)=>{
+export const state19 = async (req:Request,res:Response)=>{
     try {
-        list  = await state9Service.findAll()
+        let list  = await state19Service.findAll()
         res.status(200).json(list)
         
     } catch (error) {

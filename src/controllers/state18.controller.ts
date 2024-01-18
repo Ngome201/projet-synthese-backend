@@ -1,12 +1,12 @@
 import { Request,Response } from "express"
-import { State17Service } from "../services"
-import { State17 } from "../entities"
-import { MyZone, StateDTO17 } from "../types"
+import { State18Service } from "../services"
+import { State18 } from "../entities"
+import { MyZone, StateDTO18 } from "../types"
 
-const state17Service = new State17Service()
+const state18Service = new State18Service()
 let list
 
-export const getState17 = async (req:Request,res:Response)=>{
+export const getState18 = async (req:Request,res:Response)=>{
     let code: number = -1, critere: MyZone = undefined
 
     if(req.query.code_commune) {code = parseInt(req.query.code_commune.toString()); critere = MyZone.Commune}
@@ -15,8 +15,8 @@ export const getState17 = async (req:Request,res:Response)=>{
     else if(req.query.code_pays) {code = parseInt(req.query.code_pays.toString()); critere = MyZone.Pays}
 
     try {
-        list = await state17Service.findByZone(critere,code)
-        let state :StateDTO17 = {
+        list = await state18Service.findByZone(critere,code)
+        let state :StateDTO18 = {
             type_zone: MyZone[critere],
             code_zone: code,
             list: list
@@ -28,26 +28,34 @@ export const getState17 = async (req:Request,res:Response)=>{
         
     }
 }
-export const saveState17 = async (req:Request,res:Response)=>{
+export const saveState18 = async (req:Request,res:Response)=>{
     const {
-        secteur ,
-        vilages ,
-        problemes,    
-        causes ,    
-        effets ,    
-        solutions,
-        code_commune } = req.body
+        village, 
+            femmes, 
+            hommes, 
+            total, 
+            nourrissons, 
+            popcible, 
+            popageprescolaire,
+            popagescolprimaire,
+            ado,
+            popjeunes, 
+            code_commune } = req.body
     try {
-        let state17 = new State17(
-            secteur ,
-            vilages ,
-            problemes,    
-            causes ,    
-            effets ,    
-            solutions,
+        let state18 = new State18(
+            village, 
+            femmes, 
+            hommes, 
+            total, 
+            nourrissons, 
+            popcible, 
+            popageprescolaire,
+            popagescolprimaire,
+            ado,
+            popjeunes, 
             code_commune
             )
-        let saved = await state17Service.save(state17)
+        let saved = await state18Service.save(state18)
         res.status(201).json(saved)
         return
     } catch (error) {
@@ -55,9 +63,9 @@ export const saveState17 = async (req:Request,res:Response)=>{
         
     }
 }
-export const state17 = async (req:Request,res:Response)=>{
+export const state18 = async (req:Request,res:Response)=>{
     try {
-        let list  = await state17Service.findAll()
+        let list  = await state18Service.findAll()
         res.status(200).json(list)
         
     } catch (error) {

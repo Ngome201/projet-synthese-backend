@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { State3,State4,State7, State8, State9, State10, State11, State13, State14, State15, State16, State17 } from "./entities";
+import { State3,State4,State7, State8, State9, State10, State11, State13, State14, State15, State16, State17, State18, State19, State20, State21, State22, State23, State24, State25, State26 } from "./entities";
 import { CouncilPresentation } from "./entities/CouncilPresentation";
 import { CouncilSignage } from "./entities/CouncilSignage";
 import { RessourceNaturelle } from "./entities/RessourceNaturelle";
@@ -27,6 +27,7 @@ export const AppDataSource = new DataSource({
          RessourceNaturelle, RessourceFaunique,
          State3,State4,State7,State9,State10, State8, State11,State13,State14,State15,State16,State17,
          Historique,
+         State18,State19,State20,State21,State22,State23,State24,State25,State26,
          Pays, Region, Departement, Commune, Localite, Zone],
     synchronize :true
 })

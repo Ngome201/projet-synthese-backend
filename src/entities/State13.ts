@@ -6,7 +6,7 @@ export class State13 extends Sharedprops{
     constructor(
         year : string,
         libelle : string,
-        percentage : number,    
+        percentage : string,    
         code_commune: number){
         super()
         this.year= year
@@ -26,7 +26,7 @@ export class State13 extends Sharedprops{
     libelle : string
 
     @Column()
-    percentage : number
+    percentage : string
 
     @Column()
     code_commune : number
