@@ -8,7 +8,7 @@ export class State15 extends Sharedprops{
         contraintes : string[],
         axeRenforcement : string[],    
         dateLimite : string,    
-        besoinAppui : boolean,    
+        besoinAppui : string,    
         code_commune: number){
         super()
         this.aspectAnalyse= aspectAnalyse
@@ -36,8 +36,8 @@ export class State15 extends Sharedprops{
     @Column()
     dateLimite : string
 
-    @Column()
-    besoinAppui : boolean
+    @Column({nullable : true})
+    besoinAppui : string
 
     @Column()
     code_commune : number

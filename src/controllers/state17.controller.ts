@@ -30,20 +30,20 @@ export const getState17 = async (req:Request,res:Response)=>{
 }
 export const saveState17 = async (req:Request,res:Response)=>{
     const {
-        aspectAnalyse,
-        contraintes,
-        opportunites,
-        faiblesses,
-        forces,
+        secteur ,
+        vilages ,
+        problemes,    
+        causes ,    
+        effets ,    
         solutions,
         code_commune } = req.body
     try {
         let state17 = new State17(
-            aspectAnalyse,
-            contraintes,
-            opportunites,
-            faiblesses,
-            forces,
+            secteur ,
+            vilages ,
+            problemes,    
+            causes ,    
+            effets ,    
             solutions,
             code_commune
             )
