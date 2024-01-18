@@ -7,7 +7,7 @@ const state22Service = new State22Service()
 let list
 
 export const getState22 = async (req:Request,res:Response)=>{
-    let code: number = -2, critere: MyZone = undefined
+    let code: number = -1, critere: MyZone = undefined
 
     if(req.query.code_commune) {code = parseInt(req.query.code_commune.toString()); critere = MyZone.Commune}
     else if(req.query.code_departement) {code = parseInt(req.query.code_departement.toString()); critere = MyZone.Departement}

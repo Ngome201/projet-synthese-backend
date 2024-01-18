@@ -24,7 +24,7 @@ export class State22 extends Sharedprops{
     @PrimaryGeneratedColumn()
     id : number
 
-    @Column()
+    @Column("text",{array:true,nullable:true})
     culturePratiquee :string[]
 
     @Column("text",{array:true,nullable:true})
