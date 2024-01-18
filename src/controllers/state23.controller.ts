@@ -33,7 +33,8 @@ export const saveState23 = async (req:Request,res:Response)=>{
         unitePaysage ,
         caracteristiques,
         utilisationActuelle,    
-        potentialites ,    
+        potentialites , 
+        contraintes,   
         solEndogenes ,
         solEnvisagees ,    
         code_commune} = req.body
@@ -42,7 +43,8 @@ export const saveState23 = async (req:Request,res:Response)=>{
             unitePaysage ,
         caracteristiques,
         utilisationActuelle,    
-        potentialites ,    
+        potentialites , 
+        contraintes,   
         solEndogenes ,
         solEnvisagees ,    
         code_commune   

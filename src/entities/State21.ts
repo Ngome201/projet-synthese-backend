@@ -6,8 +6,8 @@ export class State21 extends Sharedprops{
     constructor(
         culture : string,
         bassinProduction : string, 
-        superficieCultivees : string[],
-        productionEstimees : string[],                   
+        superficieCultivees : number,
+        productionEstimees : number,                   
         code_commune: number){
         super()
         this.culture = culture
@@ -28,11 +28,11 @@ export class State21 extends Sharedprops{
     @Column("text",{array:true,nullable:true})
     bassinProduction : string
 
-    @Column("text",{array:true,nullable:true})
-    superficieCultivees : string[]
+    @Column()
+    superficieCultivees : number
 
     @Column()
-    productionEstimees : string[]
+    productionEstimees : number
 
     @Column()
     code_commune : number

@@ -10,7 +10,7 @@ export class State26 extends Sharedprops{
         actvitePratiquees : string[],    
         rentabilite : string[],
         organisation : string[],    
-        accesInfrastructures : string[],    
+        accesInfrastructures : string,    
         code_commune: number){
         super()
         this.coucheVulnerable= coucheVulnerable
@@ -46,8 +46,8 @@ export class State26 extends Sharedprops{
     @Column("text",{array:true,nullable:true})
     organisation : string[]
 
-    @Column("text",{array:true,nullable:true})
-    accesInfrastructures : string[]
+    @Column()
+    accesInfrastructures : string
 
     @Column()
     code_commune : number

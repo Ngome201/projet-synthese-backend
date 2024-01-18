@@ -30,31 +30,14 @@ export const getState19 = async (req:Request,res:Response)=>{
 }
 export const saveState19 = async (req:Request,res:Response)=>{
     const {
-        typespece,
-        bovin,
-        ovin,
-        caprin,
-        pigeon,
-        poulet ,    
-        pintades ,    
-        canards ,    
-        oies,
-        dindons,
-        lapin,
+        typeEspece,
+        effectif,
         code_commune } = req.body
     try {
         let state19 = new State19(
-            typespece,
-        bovin,
-        ovin,
-        caprin,
-        pigeon,
-        poulet ,    
-        pintades ,    
-        canards ,    
-        oies,
-        dindons,
-        lapin,
+           
+        typeEspece,
+        effectif,
         code_commune 
             )
         let saved = await state19Service.save(state19)

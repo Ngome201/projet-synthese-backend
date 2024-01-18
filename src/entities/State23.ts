@@ -5,11 +5,12 @@ import { Sharedprops } from "./SharedProps";
 export class State23 extends Sharedprops{
     constructor(
         unitePaysage : string,
-        caracteristiques : string[],
-        utilisationActuelle : string[],    
-        potentialites : string,    
-        solEndogenes : string,
-        solEnvisagees : string,    
+        caracteristiques : string,
+        utilisationActuelle : string,    
+        potentialites : string[],  
+        contraintes : string[],  
+        solEndogenes : string[],
+        solEnvisagees : string[],    
         code_commune: number){
         super()
         this.unitePaysage = unitePaysage
@@ -18,6 +19,7 @@ export class State23 extends Sharedprops{
         this.potentialites =  potentialites
         this.solEndogenes = solEndogenes
         this.solEnvisagees = solEnvisagees
+        this.contraintes = contraintes
         this.code_commune = code_commune
 
 
@@ -29,20 +31,23 @@ export class State23 extends Sharedprops{
     @Column()
     unitePaysage :string
 
+    @Column()
+    caracteristiques : string
+
+    @Column()
+    utilisationActuelle : string
+
     @Column("text",{array:true,nullable:true})
-    caracteristiques : string[]
+    potentialites : string[]
 
     @Column("text",{array:true,nullable:true})
-    utilisationActuelle : string[]
+    solEndogenes : string[]
 
-    @Column()
-    potentialites : string
+    @Column("text",{array:true,nullable:true})
+    contraintes : string[]
 
-    @Column()
-    solEndogenes : string
-
-    @Column()
-    solEnvisagees : string
+    @Column("text",{array:true,nullable:true})
+    solEnvisagees : string[]
 
     @Column()
     code_commune : number

@@ -6,11 +6,11 @@ import { ADDRCONFIG } from "dns";
 export class State18 extends Sharedprops{
     constructor(
         village : string,
-        femmes : string[],
-        hommes : string[],    
-        total : string[],    
-        nourrissons : string[],    
-        popcible : string[],    
+        femmes : number,
+        hommes : number,    
+        total : number,    
+        nourrissons : number,    
+        popcible : number,    
         popageprescolaire: number,
         popagescolprimaire: number,
         ado: number,
@@ -39,19 +39,19 @@ export class State18 extends Sharedprops{
     vilage :string
 
     @Column()
-    femmes : string[]
+    femmes : number
 
     @Column()
-    hommes : string[]
+    hommes : number
 
     @Column()
-    total : string[]
+    total : number
 
     @Column()
-    nourrissons : string[]
+    nourrissons : number
 
     @Column()
-    popcible : string[]
+    popcible : number
 
     @Column()
     popagepreescolaire : number

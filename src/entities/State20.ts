@@ -5,9 +5,9 @@ import { Sharedprops } from "./SharedProps";
 export class State20 extends Sharedprops{
     constructor(
         especesElevees : string,
-        effectifEleveurs : string,
+        effectifEleveurs : number,
         modeElevage : string[],    
-        effectif : string,    
+        effectif : number,    
         bassinProduction : string,    
         code_commune: number){
         super()
@@ -27,14 +27,14 @@ export class State20 extends Sharedprops{
     @Column()
     especesElevees :string
 
-    @Column("text",{array:true,nullable:true})
-    effectifEleveurs : string
+    @Column()
+    effectifEleveurs : number
 
     @Column("text",{array:true,nullable:true})
     modeElevage : string[]
 
     @Column()
-    effectif : string
+    effectif : number
 
     @Column()
     bassinProduction : string

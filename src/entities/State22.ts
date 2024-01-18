@@ -4,11 +4,11 @@ import { Sharedprops } from "./SharedProps";
 @Entity()
 export class State22 extends Sharedprops{
     constructor(
-        culturePratiquee : string,
+        culturePratiquee : string[],
         outils : string[],
         problemes : string[],    
-        atouts : string,    
-        principauxOrgAppui : string,    
+        atouts : string[],    
+        principauxOrgAppui : string[],    
         code_commune: number){
         super()
         this.culturePratiquee= culturePratiquee
@@ -25,7 +25,7 @@ export class State22 extends Sharedprops{
     id : number
 
     @Column()
-    culturePratiquee :string
+    culturePratiquee :string[]
 
     @Column("text",{array:true,nullable:true})
         outils : string[]
@@ -33,11 +33,11 @@ export class State22 extends Sharedprops{
     @Column("text",{array:true,nullable:true})
     problemes : string[]
 
-    @Column()
-    atouts : string
+    @Column("text",{array:true,nullable:true})
+    atouts : string[]
 
-    @Column()
-    principauxOrgAppui : string
+    @Column("text",{array:true,nullable:true})
+    principauxOrgAppui : string[]
 
     @Column()
     code_commune : number
